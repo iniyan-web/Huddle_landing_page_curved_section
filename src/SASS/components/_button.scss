@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+
+  &--header {
+    width: 8.4rem;
+    height: 2.4rem;
+    padding: 0.2rem 1.5rem;
+    font-weight: 400;
+    color: $primary-color-2;
+    background-color: transparent;
+    border: 1px solid $primary-color-2;
+    border-radius: 2rem;
+    transition: all 0.4s;
+
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 1px 10px 10px 0px $btn-shadow;
+    }
+  }
+
+  &--hero,
+  &--get-started {
+    font-size: 1.2rem;
+    width: 22rem;
+    height: 3.8rem;
+    color: $neutral-color-2;
+    background-color: $primary-color-1;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: 5px 6px 6px 0 $btn-shadow;
+  }
+
+  &--form {
+    width: 9.5rem;
+    height: 2.8rem;
+    color: $neutral-color-2;
+    background-color: $primary-color-1;
+    border: none;
+    border-radius: 5px;
+  }
+
+  &--hero,
+  &--get-started,
+  &--form {
+    &:hover {
+      background-color: $primary-color-2;
+    }
+  }
+}

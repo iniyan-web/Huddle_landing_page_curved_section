@@ -1,0 +1,120 @@
+@use "../abstracts/variables" as *;
+
+footer {
+  height: auto;
+  padding: 15rem 5rem 5rem;
+  background-color: $neutral-color-1;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9rem;
+    background: url(../../images/bg-footer-top-desktop.svg) top left no-repeat,
+      white;
+    background-size: cover;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $neutral-color-2;
+  }
+
+  .#{&}__logo {
+    margin-bottom: 1.5rem;
+  }
+
+  .nl {
+    width: 33rem;
+
+    &__heading {
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      color: $neutral-color-2;
+      margin-bottom: 1.5rem;
+    }
+
+    &__info {
+      padding-right: 28%;
+      margin-bottom: 1.5rem;
+    }
+
+    &__form {
+      width: 100%;
+      position: relative;
+      cursor: pointer;
+
+      .form__error {
+        position: absolute;
+        z-index: 0;
+        bottom: -1.4rem;
+        left: 0;
+        font-size: 0.85rem;
+        color: $primary-color-3;
+      }
+    }
+  }
+
+  .contact {
+    width: 22rem;
+
+    &__info {
+      margin-bottom: 1.5rem;
+    }
+
+    .phone__info,
+    .mail__info {
+      display: inline-block;
+      margin-left: 16px;
+    }
+
+    .phone__icon,
+    .mail__icon {
+      position: relative;
+      bottom: -2px;
+    }
+
+    &__phone {
+      margin-bottom: 1rem;
+    }
+
+    &__mail {
+      margin-bottom: 4rem;
+    }
+
+    .social-icons {
+      width: 9rem;
+      margin-left: -7px;
+
+      .icon {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        mask-size: cover;
+        background-color: $neutral-color-2;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $icon-hover;
+        }
+      }
+
+      .icon--fb {
+        mask: url(../../images/logo-facebook.svg);
+      }
+
+      .icon--insta {
+        mask: url(../../images/logo-instagram.svg);
+      }
+
+      .icon--twitter {
+        mask: url(../../images/logo-twitter.svg);
+      }
+    }
+  }
+}

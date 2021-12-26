@@ -1,0 +1,13 @@
+@use "../abstracts/mixins" as *;
+
+header,
+.hero__stats,
+.feature-card,
+.social-icons,
+.nl__form {
+  @include flexBox(center, space-between);
+}
+
+footer {
+  @include flexBox(flex-start, space-between);
+}

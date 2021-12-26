@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as *;
+
+header {
+  margin-bottom: 10rem;
+}
+
+.hero {
+  padding: 4rem 5rem 10rem;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 9rem;
+    background: url(../../images/bg-section-top-desktop-1.svg) no-repeat;
+    background-size: cover;
+  }
+
+  &__title {
+    font-size: 2.76rem;
+    margin-bottom: 0.5em;
+  }
+
+  &__info {
+    padding: 0 25%;
+  }
+
+  .btn--hero {
+    margin: 2.5rem 0 5.9rem;
+  }
+
+  &__img {
+    margin: 0 auto;
+    display: block;
+    width: 60rem;
+  }
+
+  &__stats {
+    margin: 9rem 18.5% 5rem 16.5%;
+
+    .stat__comms,
+    .stat__msgs {
+      position: relative;
+    }
+
+    .comms__count,
+    .msgs__count {
+      font-size: 4.7rem;
+      font-weight: 700;
+    }
+
+    .comms__text,
+    .msgs__text {
+      color: $neutral-color-3;
+    }
+
+    .comms__img,
+    .msgs__img {
+      width: 40px;
+      position: absolute;
+      top: -2.2rem;
+      left: 0;
+    }
+  }
+}
